@@ -1,0 +1,21 @@
+ALGORITHM read_sentence
+VAR
+ function checkSentenceEnding(sentence) {
+    let pointFound = false;
+    let sentenceString = '';
+BEGIN
+for (let i = 0; i < sentence.length; i++) {
+        let char = sentence.charAt(i);
+        sentenceString += char;
+        if (char === '.') {
+            pointFound = true;
+        }
+    }
+
+    if (pointFound) {
+        console.log("The sentence ends with a point.");
+    } else {
+        console.log("The sentence does not end with a point.");
+    }
+END
+
